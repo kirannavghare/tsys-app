@@ -7,6 +7,8 @@ import { UserComponent } from './user/user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { FooterComponent } from './footer/footer.component';
+import { HighlightDirective } from './highlight.directive';
+import { ImgurlPipe } from './imgurl.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FooterComponent } from './footer/footer.component';
     UserComponent,
     ListUserComponent,
     MainContainerComponent,
-    FooterComponent
+    FooterComponent,
+    HighlightDirective,
+    ImgurlPipe
   ],
   imports: [
     BrowserModule
