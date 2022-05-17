@@ -9,6 +9,9 @@ import { MainContainerComponent } from './main-container/main-container.componen
 import { FooterComponent } from './footer/footer.component';
 import { HighlightDirective } from './highlight.directive';
 import { ImgurlPipe } from './imgurl.pipe';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HighlightComponent } from './highlight/highlight.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ImgurlPipe } from './imgurl.pipe';
     MainContainerComponent,
     FooterComponent,
     HighlightDirective,
-    ImgurlPipe
+    ImgurlPipe,
+    ContactUsComponent,
+    ContactusComponent,
+    HighlightComponent
   ],
   imports: [
     BrowserModule

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserProfileService } from './user-profile.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first';
+
+  constructor(private myUsersrv: UserProfileService) {
+    console.log("i m in app-component classs")
+    let myname = this.myUsersrv.getCompName();
+    console.log(myname);
+  }
+
+  
 }
+
+
