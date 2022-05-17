@@ -9,7 +9,6 @@ describe('UserProfileService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(UserProfileService);
   });
-
   it('should be created', () => {
     expect(service).toBeTruthy();
   });

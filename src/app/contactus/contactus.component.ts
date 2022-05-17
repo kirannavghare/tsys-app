@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserProfileService } from '../user-profile.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+ constructor(private add:UserProfileService)
+ {
+   let addr=this.add.getAddress();
+   console.log(addr);
+ }
+  ngOnInit(): void 
+  {
   }
 
 }

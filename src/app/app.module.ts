@@ -9,13 +9,14 @@ import { MainContainerComponent } from './main-container/main-container.componen
 import { FooterComponent } from './footer/footer.component';
 import { HighlightDirective } from './highlight.directive';
 import { ImgurlPipe } from './imgurl.pipe';
-import { ContactUsComponent } from './contact-us/contact-us.component';
+
 import { ContactusComponent } from './contactus/contactus.component';
 import { HighlightComponent } from './highlight/highlight.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
-    AppComponent,
     HeaderComponent,
     UserComponent,
     ListUserComponent,
@@ -23,12 +24,13 @@ import { HighlightComponent } from './highlight/highlight.component';
     FooterComponent,
     HighlightDirective,
     ImgurlPipe,
-    ContactUsComponent,
     ContactusComponent,
     HighlightComponent
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

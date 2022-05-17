@@ -5,9 +5,10 @@ import { UserProfileService } from './user-profile.service';
   providedIn: 'root'
 })
 export class BaseConfigService {
-
-  constructor(private userServ:UserProfileService) {
-    let user=userServ.getAddress();
+url="www.something";
+  constructor(private userServ: UserProfileService) 
+  {
+    let user = userServ.getAddress();
     console.log(user);
-   }
+  }
 }
