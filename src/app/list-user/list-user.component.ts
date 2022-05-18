@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListUserComponent implements OnInit {
 
-  
- constructor()
-{
+  mydata: any;
 
-}
+
+  constructor(private myhttp: HttpClient) {
+
+  }
   ngOnInit(): void {
+    this.myhttp.get("https://reqres.in/api/users?page=2").subscribe((data) => {
+      this.mydata = data;
+    })
+
   }
 
 }
