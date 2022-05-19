@@ -1,6 +1,18 @@
-<p>list-user works!
-    {{mydata | json}}
-    <app-user></app-user>
-</p>
+<pre>list-user works!
+     {{mydata | json}}
+    <app-user></app-user> 
+</pre>
+<div *ngFor="let myVal of mydata.data">
+    <div class="card" style="width: 18rem;" >
+        <img src="{{myVal.avatar}}" class="card-img-top" alt="...">
+        <div class="card-body" *ngIf="myVal.first_name  == 'Michael'">
+            <h5 class="card-title">{{myVal.first_name }} {{myVal.last_name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+            <a href="#" class="btn btn-primary">{{myVal.email}}</a>
+        </div>
+    </div>
+</div>
 
 

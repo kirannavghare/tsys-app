@@ -16,6 +16,7 @@ import { HighlightComponent } from './highlight/highlight.component';
 import { HttpClientModule } from '@angular/common/http'
 import { Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { LearnRXComponent } from './learn-rx/learn-rx.component';
 
 const routesConfig: Routes = [
   {
@@ -34,7 +35,12 @@ const routesConfig: Routes = [
   {
     path: 'my/list',
     component: UserComponent
+  },
+  {
+    path: 'learnRX',
+    component: LearnRXComponent
   }
+
 ];
 @NgModule({
   declarations: [
@@ -47,7 +53,8 @@ const routesConfig: Routes = [
     HighlightDirective,
     ImgurlPipe,
     ContactusComponent,
-    HighlightComponent
+    HighlightComponent,
+    LearnRXComponent
   ],
   imports: [
     BrowserModule,
