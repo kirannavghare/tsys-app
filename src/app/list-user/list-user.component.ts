@@ -15,10 +15,12 @@ export class ListUserComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.myhttp.get("https://reqres.in/api/users?page=2").subscribe((data) => {
-      this.mydata = data;
-    })
-
+    
+    this.myhttp.get('https://reqres.in/api/users?page=2')
+    .pipe()
+    .subscribe(
+      (mydata) => this.mydata = mydata
+    );
   }
 
 }
